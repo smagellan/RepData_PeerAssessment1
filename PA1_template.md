@@ -92,21 +92,15 @@ alteredDailyPattern <- sqldf("select interval, isWeekday, avg(steps) as avg_step
             order by interval asc");
 
 library(ggplot2);
-```
-
-```
-## Need help? Try the ggplot2 mailing list: http://groups.google.com/group/ggplot2.
-```
-
-```r
 ggplot(alteredDailyPattern, 
        aes(interval, avg_steps) ) + 
     geom_line() + 
-    facet_wrap(~ isWeekday) + 
+    facet_wrap(~ isWeekday, ncol = 1) + 
     xlab("time") + 
     ylab("number of steps") + 
     ggtitle("Differences in activity patterns between weekdays and weekends")
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
-Interesting to see, for WeekDays there is a splash at "5:00".
+
+Interesting to see, for WeekDays there is a splash at "5:00". WeekEnds have no such splash.

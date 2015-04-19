@@ -89,4 +89,5 @@ ggplot(alteredDailyPattern,
     ylab("number of steps") + 
     ggtitle("Differences in activity patterns between weekdays and weekends")
 ```
+
 Interesting to see, for WeekDays there is a splash at "5:00". WeekEnds have no such splash.
