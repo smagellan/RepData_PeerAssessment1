@@ -34,6 +34,7 @@ hist(r1$sum_steps, xlab = "number of steps", main = "total number of steps per d
 ```
 
 ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png) 
+
 NA values were ignored. So, mean and median of the total number of steps taken per day are 10766.19 and 10765 accordingly.
 
 
@@ -51,6 +52,7 @@ plot(dailyPattern$interval, dailyPattern$avg_steps, ylab = "number of steps", xl
 ```
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
+
 Most "active" interval within a day (i.e. contains the maximum number of steps) is 835
 
 
@@ -77,6 +79,7 @@ hist(alteredDailySteps$sum_steps, xlab = "number of steps", main = "total number
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+
 Now mean and median of the total number of steps taken per day are 10766.19 and 10766.19 accordingly. Values are almost the same (compared to step 2, "What is the average daily activity pattern") since NA values were imputed using average daily pattern.
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -103,4 +106,4 @@ ggplot(alteredDailyPattern,
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
-Interesting to see, for WeekDays there is a splash at "5:00". WeekEnds have no such splash.
+Interesting to see, for WeekDays there is a splash at "5:00". WeekEnds have no the splash.

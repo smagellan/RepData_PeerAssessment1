@@ -30,6 +30,7 @@ r1mean <- mean(r1$sum_steps);
 r1median <- median(r1$sum_steps);
 hist(r1$sum_steps, xlab = "number of steps", main = "total number of steps per day");
 ```
+
 NA values were ignored. So, mean and median of the total number of steps taken per day are `r r1mean` and `r r1median` accordingly.
 
 
@@ -44,6 +45,7 @@ maxStepsIndex <- which.max(dailyPattern$avg_steps);
 maxStepsInterval <- dailyPattern$interval[maxStepsIndex];
 plot(dailyPattern$interval, dailyPattern$avg_steps, ylab = "number of steps", xlab = "time", main ="average number of steps per 5-minute interval within a day", type = "l");
 ```
+
 Most "active" interval within a day (i.e. contains the maximum number of steps) is `r maxStepsInterval`
 
 
@@ -67,6 +69,7 @@ alteredMean <- mean(alteredDailySteps$sum_steps);
 alteredMedian <- median(alteredDailySteps$sum_steps);
 hist(alteredDailySteps$sum_steps, xlab = "number of steps", main = "total number of steps per day");
 ```
+
 Now mean and median of the total number of steps taken per day are `r alteredMean` and `r alteredMedian` accordingly. Values are almost the same (compared to step 2, "What is the average daily activity pattern") since NA values were imputed using average daily pattern.
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -90,4 +93,4 @@ ggplot(alteredDailyPattern,
     ggtitle("Differences in activity patterns between weekdays and weekends")
 ```
 
-Interesting to see, for WeekDays there is a splash at "5:00". WeekEnds have no such splash.
+Interesting to see, for WeekDays there is a splash at "5:00". WeekEnds have no the splash.
